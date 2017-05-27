@@ -19,9 +19,7 @@ export class ParcerComponent implements OnInit {
     myReader.onload = e => {
       this.text = myReader.result; 
     };
-    myReader.onloadend = function (e) {
-      text = myReader.result;
-    }
+    
     myReader.readAsText(file);
   }
 
