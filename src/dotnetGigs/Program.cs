@@ -13,6 +13,7 @@ namespace DotNetGigs
         {
             var host = new WebHostBuilder()
                 .UseKestrel()
+                .UseUrls("https://localhost:5005")
                 .UseContentRoot(Directory.GetCurrentDirectory())
                 .UseIISIntegration()
                 .UseStartup<Startup>()

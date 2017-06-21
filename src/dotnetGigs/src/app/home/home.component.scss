@@ -1,3 +1,88 @@
-.navbar-nav {
-    padding: 10px;
+
+.about {
+    background-color: black;
+    box-shadow: 10% #777;
+    word-wrap:break-word;
+    width: 100%;
+}
+
+
+#accordion{
+    display:block;
+  float:left;
+  width:100%;
+  transform:skew(0deg,-7deg);
+-ms-transform:skew(0deg,-10deg);
+-webkit-transform:skew(0deg,-5deg); 
+    margin-bottom: 10%;
+
+}
+
+#accordion-reverse{
+      display:block;
+  float:left;
+  width:100%;
+
+  transform:skew(0deg,-7deg);
+-ms-transform:skew(0deg,-10deg);
+-webkit-transform:skew(0deg,-5deg); 
+    margin-bottom: 10%;
+
+}
+
+a {
+    color: white;
+}
+
+.container{
+    padding-left: 0px;
+}
+
+.body-container {
+    background-color: rgba(245, 245, 245, 0.2);
+    color: black;
+}
+
+.change-to-black {
+    background-color: black;
+    padding: 2%;
+}
+
+body {
+
+  color: #5a5a5a;
+}
+
+.remove-diagonal {
+  transform:skew(0deg,0deg);
+-ms-transform:skew(0deg,0deg);
+-webkit-transform:skew(0deg,5deg); 
+}
+
+.card-header {
+    border-bottom: 0px solid rgba(0, 0, 0, 0.125);
+
+}
+
+.add-background {
+
+    background-color: purple;
+}
+
+.nav-background{
+    background: grey;
+}
+
+.card {
+    position: inherit;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: column;
+    background-color: slategrey;
+    border-radius: 0.25rem;
+    min-width: 200px;
 }

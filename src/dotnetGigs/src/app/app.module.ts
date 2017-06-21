@@ -8,20 +8,23 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { ParcerComponent } from './parcer/parcer.component';
 import { ResumeComponent } from './resume/resume.component';
-import { BlogComponent } from './blog/blog.component';
 import { HomeComponent } from './home/home.component';
+import { SideheaderComponent } from './sideheader/sideheader.component';
+import { CoursesComponent } from './courses/courses.component';
+import { ProjectsComponent } from './projects/projects.component';
+import { EducationComponent } from './education/education.component';
+import { HomecontentComponent } from './homecontent/homecontent.component';
+import { FooterComponent } from './footer/footer.component';
+import { BlogsComponent } from './blogs/blogs.component';
+import { BlogComponent } from './blog/blog.component';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'parcer', component: ParcerComponent },
-  { path: 'blog', component: BlogComponent },
   { path: 'resume', component: ResumeComponent },
-  // { path: 'hero/:id',      component: HeroDetailComponent },
-  // {
-  //   path: 'heroes',
-  //   component: HeroListComponent,
-  //   data: { title: 'Heroes List' }
-  // },
+  { path: 'courses', component: CoursesComponent },
+  { path: 'projects', component: ProjectsComponent },
+  { path: 'education', component: EducationComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: '**', component: AppComponent}
 ];
@@ -32,8 +35,15 @@ const appRoutes: Routes = [
     HeaderComponent,
     ParcerComponent,
     ResumeComponent,
-    BlogComponent,
-    HomeComponent
+    HomeComponent,
+    SideheaderComponent,
+    CoursesComponent,
+    ProjectsComponent,
+    EducationComponent,
+    HomecontentComponent,
+    FooterComponent,
+    BlogsComponent,
+    BlogComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),

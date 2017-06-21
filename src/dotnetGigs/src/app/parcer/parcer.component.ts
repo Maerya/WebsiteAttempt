@@ -1,26 +1,38 @@
 import { Component, OnInit } from '@angular/core';
+import { Http } from '@angular/http'
+import { AppComponent } from 'app/app.component';
 
 @Component({
-  selector: 'app-parcer',
+  selector: 'parcer',
   templateUrl: './parcer.component.html',
   styleUrls: ['./parcer.component.scss']
 })
 export class ParcerComponent implements OnInit {
 
-  constructor() { }
+  constructor(public http: Http) { }
 
-  text: any;
+  text: String[];
+  parced: String[];
+  holder: String[]
 
   changeListener($event): void {
-    var text: any;
-    var file: File = $event.target.files[0];
-    var myReader: FileReader = new FileReader();
+    let file: File = $event.target.files[0];
+    let myReader: FileReader = new FileReader();
+
+    let test = new AppComponent(this.http);
 
     myReader.onload = e => {
-      this.text = myReader.result; 
+      this.text = myReader.result;
+      test.submitFiles(this.text);
+      
     };
+
     
+
+    let holder = test.receiveParced();
+    console.log(holder);
     myReader.readAsText(file);
+
   }
 
   ngOnInit() {

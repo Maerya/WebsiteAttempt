@@ -1,0 +1,81 @@
+.contact {
+    background-color: rgba(245, 245, 245, 0.4);
+    box-shadow: 10px 10px 5px #666;
+    word-wrap:break-word;
+}
+
+.purpose {
+    background-color: rgba(245, 245, 245, 0.4);
+    box-shadow: 10px 10px 5px #555;
+ 
+    padding-bottom: -70%;
+    word-wrap:break-word;
+}
+
+.recreational {
+    background-color: rgba(245, 245, 245, 0.4);
+    box-shadow: 10px 10px 5px #444;
+
+    padding-bottom: -85%;
+    word-wrap:break-word;
+}
+
+@media (min-width: 776px) {
+    .technical {
+        margin-right: -25%;
+    }
+}
+
+@media (min-width: 576px){
+    .container{
+        width: 100%;
+    }
+}
+
+@media (max-width: 776px) {
+    .technical {
+        margin-right: 0px;
+    }
+}
+
+.technical {
+    background-color: rebeccapurple;
+    box-shadow: 10px 10px 5px #222;
+    padding-bottom: -90%;
+    margin-top:3%;
+    word-wrap:break-word;
+}
+
+a {
+    color: black;
+}
+
+html {
+    background-color: purple;
+}
+
+h4 {
+    padding: 1%;
+}
+
+.container{
+    padding-left: 0px;
+}
+
+.body-container {
+    background-color: rgba(245, 245, 245, 0.2);
+    color: black;
+}
+
+p {
+    padding-left: 2%;
+}
+
+/* GLOBAL STYLES
+-------------------------------------------------- */
+/* Padding below the footer and lighter body text */
+
+body {
+  padding-bottom: 40px;
+  color: #5a5a5a;
+}

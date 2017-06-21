@@ -1,23 +1,70 @@
-<div class="row">
-  <div class="col-md-9">
-    Left Side
-  </div>
-  <div class="col-md-2 ">
-    <nav class="nav-sidebar navbar-toggler-right navbar-inverse bg-inverse">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="home">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="resume">Resume</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="parcer">Parcer</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="blog">Blog</a>
-        </li>
-      </ul>
-    </nav>
+<div id="accordion" role="tablist" aria-multiselectable="true">
+  <div class="row">
+    <div class="card col-2">
+      <div class="card-header add-tilt no-bottom add-background" role="tab" id="headingOne">
+        <div class="about" role="tablist" aria-multiselectable="true">
+          <div class="card aboutl">
+            <div class="card-header about" role="tab" id="headingOne">
+              <h5 class="mb-0">
+                <a data-toggle="collapse" data-parent="#accordion" class="open-modal" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                 About
+        </a>
+              </h5>
+            </div>
+          </div>
+          <div class="card aboutl">
+            <div class="card-header about" role="tab" id="headingTwo">
+              <h5 class="mb-0">
+                <a data-toggle="collapse" data-parent="#accordion" class="open-modal" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+          Education
+        </a>
+              </h5>
+            </div>
+          </div>
+          <div class="card aboutl">
+            <div class="card-header about" role="tab" id="headingThree">
+              <h5 class="mb-0">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+          Resume
+        </a>
+              </h5>
+            </div>
+          </div>
+          <div class="card aboutl">
+            <div class="card-header about" role="tab" id="headingFour">
+              <h5 class="mb-0">
+
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                  Blogs
+                </a>
+              </h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-10 col-xs-12">
+      <div id="collapseOne" class="collapse remove-diagonal" role="tabpanel" aria-labelledby="headingOne">
+        <div class="card-block">
+          <homecontent></homecontent>
+        </div>
+      </div>
+      <div id="collapseTwo" class="collapse remove-diagonal" role="tabpanel" aria-labelledby="headingTwo">
+        <div class="card-block">
+          <education></education>
+        </div>
+      </div>
+      <div id="collapseThree" class="collapse remove-diagonal" role="tabpanel" aria-labelledby="headingThree">
+        <div class="card-block">
+          <resume></resume>
+        </div>
+      </div>
+      <div id="collapseFour" class="collapse remove-diagonal" role="tabpanel" aria-labelledby="headingFour">
+        <div class="card-block">
+          <blog></blog>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
