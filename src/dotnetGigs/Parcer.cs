@@ -3,19 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-
-// For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+using Newtonsoft.Json;
+using DotNetGigs;
 
 namespace DotNetGigs
 {
     public class Parcer
     {
-        String[] fileHolder = {"test123"};
-       public void setFile(String[] file)
+        File fileHolder;
+       public void setFile(Object file)
         {
-           this.fileHolder = file;
+           this.fileHolder = JsonConvert.DeserializeObject<File>(file.ToString());
+           Console.WriteLine(this.fileHolder + " fileHolder");
         }
-        public String[] returnFile()
+        public Object returnFile()
         {
             return this.fileHolder;
         }

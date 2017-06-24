@@ -4,12 +4,13 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using DotNetGigs;
+using Newtonsoft.Json;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace AngularWithAspCoreOne
 {
-    [Route("api/[controller]")]
+    [Route("api/values")]
     public class ValuesController : Controller
     {
         [HttpGet]
@@ -19,10 +20,12 @@ namespace AngularWithAspCoreOne
         }
 
         [HttpPost]
-        public IActionResult Get([FromBody] String[] test)
+        public IActionResult Get([FromBody] Object file)
         {
-            Console.Write(test + "C# checking in!");
-            return new ObjectResult(test);
+            Parcer parce = new Parcer();
+
+            parce.setFile(file);
+            return new ObjectResult(file);
         }
 
 

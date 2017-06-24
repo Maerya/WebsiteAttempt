@@ -1,5 +1,9 @@
-import { Component, OnInit } from '@angular/core';
-import { Http, Headers, RequestOptions } from '@angular/http'
+import { Component, OnInit, Injectable } from '@angular/core';
+import { Http, Headers, Response, RequestOptions } from '@angular/http';
+import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/operator/catch';
+import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/toPromise';
 
 @Component({
     selector: 'app-root',
@@ -9,31 +13,33 @@ import { Http, Headers, RequestOptions } from '@angular/http'
 
 export class AppComponent implements OnInit {
     constructor(private http: Http) { }
-    apiValues: string[] = [];
-    
+    private url = 'api/values';
+
+    private extractData(res: Response) {
+        let body = res.json();
+        return body.data || {};
+    }
 
     ngOnInit() {
-
-        
     }
-    
-    public submitFiles(text: String[]) {
+
+    public submitFiles(input: String[]) {
         let headers = new Headers({ 'Content-Type': 'application/json' });
         let options = new RequestOptions({ headers: headers });
-        let searchCrit = JSON.stringify('hi');
-        this.http.post('/api/values/', searchCrit, options)
-            .subscribe(result => {
-                console.log(result);
-            });
+        var hold = 'hi';
+        return this.http.post(this.url, { input }, options)
+            .toPromise()
+            .then(this.extractData)
     }
 
-    public receiveParced(): String[] {
-        this.http.get('/api/values').subscribe(values => {
-            this.apiValues = values.json() as string[];
-            console.log(this.apiValues);
-            
+    public receiveParced(): Observable<String[]> {
+        let hold;
+        this.http.get(this.url).subscribe(result => {
+            //this.searchList = result.json();
+            console.log(result);
+            hold = result;
         });
-        return this.apiValues;
-        
+        return hold;
     }
 }
+
