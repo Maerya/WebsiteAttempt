@@ -14,9 +14,11 @@ namespace AngularWithAspCoreOne
     public class ValuesController : Controller
     {
         [HttpGet]
-        public IEnumerable<string> Get()
+        public IEnumerable<string> Get(File file)
         {
-            return new string[] { "Hello", "World" };
+            var hold = new String[1];
+            hold[0] = file.input;
+            return hold;
         }
 
         [HttpPost]
@@ -25,6 +27,7 @@ namespace AngularWithAspCoreOne
             Parcer parce = new Parcer();
 
             parce.setFile(file);
+
             return new ObjectResult(file);
         }
 

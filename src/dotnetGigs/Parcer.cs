@@ -14,7 +14,7 @@ namespace DotNetGigs
        public void setFile(Object file)
         {
            this.fileHolder = JsonConvert.DeserializeObject<File>(file.ToString());
-           Console.WriteLine(this.fileHolder + " fileHolder");
+           Console.WriteLine(this.fileHolder.input);
         }
         public Object returnFile()
         {

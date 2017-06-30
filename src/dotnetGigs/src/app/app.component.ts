@@ -26,7 +26,6 @@ export class AppComponent implements OnInit {
     public submitFiles(input: String[]) {
         let headers = new Headers({ 'Content-Type': 'application/json' });
         let options = new RequestOptions({ headers: headers });
-        var hold = 'hi';
         return this.http.post(this.url, { input }, options)
             .toPromise()
             .then(this.extractData)
@@ -35,7 +34,6 @@ export class AppComponent implements OnInit {
     public receiveParced(): Observable<String[]> {
         let hold;
         this.http.get(this.url).subscribe(result => {
-            //this.searchList = result.json();
             console.log(result);
             hold = result;
         });

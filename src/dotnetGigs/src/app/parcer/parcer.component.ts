@@ -27,10 +27,7 @@ export class ParcerComponent implements OnInit {
       
     };
 
-    
-
     let holder = test.receiveParced();
-    console.log(holder);
     myReader.readAsText(file);
 
   }
