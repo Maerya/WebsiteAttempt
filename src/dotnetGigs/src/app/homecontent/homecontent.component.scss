@@ -20,24 +20,6 @@
     word-wrap:break-word;
 }
 
-@media (min-width: 776px) {
-    .technical {
-        margin-right: -25%;
-    }
-}
-
-@media (min-width: 576px){
-    .container{
-        width: 100%;
-    }
-}
-
-@media (max-width: 776px) {
-    .technical {
-        margin-right: 0px;
-    }
-}
-
 .technical {
     background-color: rebeccapurple;
     box-shadow: 10px 10px 5px #222;

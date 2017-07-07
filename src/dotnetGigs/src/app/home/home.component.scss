@@ -15,7 +15,6 @@
 -ms-transform:skew(0deg,-10deg);
 -webkit-transform:skew(0deg,-5deg); 
     margin-bottom: 10%;
-
 }
 
 #accordion-reverse{
@@ -73,6 +72,16 @@ body {
     background: grey;
 }
 
+@media (max-width:  1195px){
+    .card{
+        max-width: 100px;
+    }
+}
+
+h5 {
+    text-align: center;
+}
+
 .card {
     position: inherit;
     display: -webkit-box;
@@ -84,5 +93,6 @@ body {
     flex-direction: column;
     background-color: slategrey;
     border-radius: 0.25rem;
-    min-width: 200px;
+    max-width: 150;
+    
 }
